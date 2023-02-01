@@ -50,7 +50,7 @@ const OneBook = ({ data, fav }: IOneBookProps) => {
   const isInclude = fav.includes(isbn13);
 
   const { id } = useParams();
-  // const item = items.find((elGR) => elGR.isbn13 === isbn13);
+  const item = items.find((elGR) => elGR.isbn13 === isbn13);
 
   useEffect(() => {
     dispatch(loadOneBook(id, setIsLoading));
@@ -133,9 +133,9 @@ const OneBook = ({ data, fav }: IOneBookProps) => {
                 <FullDetails name={"Year"} value={year} />
                 <FullDetails name={"Rating"} value={rating} />
               </div>
-              {items ? (
+              {item ? (
                 <div className="more">
-                  <CartActions data={items} />
+                  <CartActions data={item} />
                 </div>
               ) : (
                 <Button
