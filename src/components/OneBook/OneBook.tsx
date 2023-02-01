@@ -133,9 +133,9 @@ const OneBook = ({ data, fav }: IOneBookProps) => {
                 <FullDetails name={"Year"} value={year} />
                 <FullDetails name={"Rating"} value={rating} />
               </div>
-              {item ? (
+              {items ? (
                 <div className="more">
-                  <CartActions data={item} />
+                  <CartActions data={items} />
                 </div>
               ) : (
                 <Button
