@@ -1,0 +1,68 @@
+.slider {
+    padding: 40px 0;
+}
+/*.swiper-wrapper {*/
+/*    display: flex;*/
+/*    width: 100%;*/
+/*    height: auto;*/
+/*    overflow: scroll;*/
+/*}*/
+.slider-container {
+    display: flex;
+    width: 100%;
+    height: auto;
+    overflow: scroll;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    z-index: 100;
+    top: 15px;
+}
+.swiper-button-prev {
+    right: 50px;
+    left: auto;
+}
+
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+    right: 10px;
+    left: auto;
+}
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+    content: '';
+    background-image: url('../../assets/undo-svgrepo-com.svg');
+    width: 24px;
+    height: 24px;
+}
+.swiper-button-next:after, .swiper-rtl .swiper-button-next:after {
+    content: '';
+    background-image: url('../../assets/next-icon.svg');
+    width: 24px;
+    height: 24px;
+}
+
+
+.slider-title {
+    margin-top: 40px;
+}
+
+/*@media screen and (max-width: 640px) {*/
+/*    .slider-container {*/
+/*        max-width: 100%;*/
+/*    }*/
+/*    .swiper-slide .book-image img {*/
+/*        margin: 0 auto;*/
+/*    }*/
+/*    .swiper-slide .book-item {*/
+/*        text-align: left;*/
+/*    }*/
+/*}*/
+
+/*@media screen and (max-width: 768px) {*/
+/*    .slider-container {*/
+/*        width: 768px;*/
+/*    }*/
+/*}*/
+
+.swiper-slide {
+    width: 100% !important;
+}

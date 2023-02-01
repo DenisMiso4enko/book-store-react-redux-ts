@@ -1,0 +1,41 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+    padding: 20px 0;
+    margin-bottom: 40px;
+    border-bottom: 1px solid black;
+}
+.actions {
+    display: flex;
+    align-items: center;
+}
+.search-bar {
+    width: 500px;
+}
+.header-btns {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.menu-btns {
+    display:  none !important;
+}
+
+
+@media (max-width: 550px){
+    .header-btns {
+        display:  none !important;
+    }
+    .menu-btns {
+        display: block !important;
+    }
+}
+
+@media (max-width: 425px){
+    .header {
+        gap: 10px;
+    }
+}
+

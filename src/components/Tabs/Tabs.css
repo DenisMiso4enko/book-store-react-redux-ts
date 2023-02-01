@@ -1,0 +1,15 @@
+.one-book__tabs {
+    margin-top: 40px;
+}
+.btn {
+    padding: 10px 20px;
+    background: inherit;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow 0.3s, color .3s;
+    color: lightslategray;
+}
+.tab-content {
+    padding: 20px 0;
+}

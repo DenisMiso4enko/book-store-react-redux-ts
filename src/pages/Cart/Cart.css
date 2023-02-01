@@ -1,0 +1,12 @@
+.cart {
+    min-height: 68vh;
+}
+
+.cart-footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+

@@ -1,0 +1,39 @@
+import React from "react";
+import { IBooks } from "../../redux/types";
+import { Link } from "react-router-dom";
+import { Rating } from "@mui/material";
+import "./BookItem.css";
+
+interface IBookVariant extends IBooks {
+  variant: string;
+}
+
+const BookItem = ({
+  image,
+  isbn13,
+  price,
+  subtitle,
+  title,
+  url,
+  variant,
+}: IBookVariant) => {
+  return (
+    <div className={`book-item book-item--${variant}`}>
+      <div className="book-image">
+        <img src={image} />
+      </div>
+      <h2>
+        <Link to={`/book/${isbn13}`}>{title}</Link>
+      </h2>
+      <p>{subtitle}</p>
+      <div className="book-details">
+        <span>{price}</span>
+        <div className="book-rate">
+          <Rating name="read-only" value={5} readOnly />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default BookItem;

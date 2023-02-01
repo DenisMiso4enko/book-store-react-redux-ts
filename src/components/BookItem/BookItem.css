@@ -1,0 +1,39 @@
+.book-item {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.book-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.book-image {
+    background: #D7E4FC;
+}
+.book-image img {
+    display: block;
+    margin: 0 auto;
+}
+
+.book-item--sm {
+    width: 100%;
+    height: auto;
+}
+@media (max-width: 1024px) {
+    .book-item {
+        width: 40%;
+    }
+    .book-item--sm {
+         width: 100%;
+
+     }
+}
+@media (max-width: 768px) {
+    .book-item {
+        width: 100%;
+        text-align: center;
+    }
+}
+

@@ -1,0 +1,54 @@
+.one-book {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.one-book__info {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.one-book__image {
+    width: 40%;
+    background: #FDE9E3;
+}
+.one-book__image img {
+    display: block;
+    margin: 0 auto;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+.tabs {
+    display: flex;
+}
+.tab-item {
+    padding: 20px;
+}
+.one-book__more-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.hidden {
+    display: none;
+}
+.title {
+    margin: 20px 0 40px;
+}
+
+@media (max-width: 767px) {
+    .one-book {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .one-book__image {
+        width: 100%;
+    }
+    .one-book__info {
+        width: 100%;
+    }
+}
