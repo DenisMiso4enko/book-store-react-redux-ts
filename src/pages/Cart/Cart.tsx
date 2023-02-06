@@ -17,7 +17,7 @@ const Cart = () => {
     <>
       <div className="cart">
         <h1>Shopping Cart</h1>
-        {items.length === 0 && <span>пусто</span>}
+        {items.length === 0 && <span>Empty</span>}
         {items.map((item) => (
           // @ts-ignore
           <CartItem key={item.isbn13} {...item} />
@@ -25,7 +25,12 @@ const Cart = () => {
       </div>
       <div className="cart-footer">
         <h3>Total: ${getTotal(items)}</h3>
-        <Button onClick={handleClearCart} variant="contained" color="error">
+        <Button
+          onClick={handleClearCart}
+          variant="contained"
+          color="error"
+          disabled={items.length === 0}
+        >
           Clear cart
         </Button>
       </div>

@@ -11,6 +11,7 @@ import { CardSkeleton } from "../BookItem/Sceleton";
 import Pagination from "../Pagination/PaginationEl";
 import { paginate } from "../../utils/paginate";
 import { setPage } from "../../redux/actionCreators/settingsActionCreators";
+import Subscribe from "../Subscribe/Subscribe";
 
 const BookList = ({ books, searchValue }: IBookListProps) => {
   window.scrollTo(0, 0);
@@ -52,6 +53,7 @@ const BookList = ({ books, searchValue }: IBookListProps) => {
         page={page}
         handleChange={handleChange}
       />
+      <Subscribe />
     </>
   );
 };

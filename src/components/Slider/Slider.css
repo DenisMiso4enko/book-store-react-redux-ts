@@ -1,12 +1,6 @@
 .slider {
     padding: 40px 0;
 }
-/*.swiper-wrapper {*/
-/*    display: flex;*/
-/*    width: 100%;*/
-/*    height: auto;*/
-/*    overflow: scroll;*/
-/*}*/
 .slider-container {
     display: flex;
     width: 100%;
@@ -43,26 +37,4 @@
 
 .slider-title {
     margin-top: 40px;
-}
-
-/*@media screen and (max-width: 640px) {*/
-/*    .slider-container {*/
-/*        max-width: 100%;*/
-/*    }*/
-/*    .swiper-slide .book-image img {*/
-/*        margin: 0 auto;*/
-/*    }*/
-/*    .swiper-slide .book-item {*/
-/*        text-align: left;*/
-/*    }*/
-/*}*/
-
-/*@media screen and (max-width: 768px) {*/
-/*    .slider-container {*/
-/*        width: 768px;*/
-/*    }*/
-/*}*/
-
-.swiper-slide {
-    width: 100% !important;
 }

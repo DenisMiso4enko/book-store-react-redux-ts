@@ -19,23 +19,22 @@ const Slider = ({ books }: SliderProps) => {
       <h1 className="slider-title">SIMILAR BOOKS</h1>
       <Swiper
         className="slider"
+        navigation={true}
         modules={[Navigation]}
         spaceBetween={50}
         slidesPerView={3}
-        navigation={true}
-        // onSlideChange={() => console.log("slide change")}
-        // onSwiper={(swiper) => console.log(swiper)}
         breakpoints={{
           320: {
-            width: 320,
-          },
-          640: {
-            width: 640,
             slidesPerView: 1,
+            spaceBetween: 20,
           },
-          768: {
-            width: 768,
+          650: {
             slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
           },
         }}
       >

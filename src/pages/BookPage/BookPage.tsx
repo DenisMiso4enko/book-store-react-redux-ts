@@ -6,6 +6,7 @@ import Slider from "../../components/Slider/Slider";
 import { useSelector } from "react-redux";
 import { IStore } from "../../redux/types";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
+import Subscribe from "../../components/Subscribe/Subscribe";
 
 const BookPage = () => {
   const { books, oneBook, favorites } = useSelector(
@@ -22,6 +23,7 @@ const BookPage = () => {
         <KeyboardBackspaceIcon />
       </Link>
       <OneBook data={oneBook} fav={favorites} />
+      <Subscribe />
       <Slider books={books} />
     </div>
   );

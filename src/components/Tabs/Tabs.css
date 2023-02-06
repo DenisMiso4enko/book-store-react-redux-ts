@@ -13,3 +13,18 @@
 .tab-content {
     padding: 20px 0;
 }
+.social-btns {
+    margin: 20px 0;
+    display: flex;
+    gap: 20px;
+}
+.social-btns-item {
+    transition: color .3s ease;
+}
+.social-btns-item:hover {
+    color: #5d5d5d;
+}
+
+.tab-details {
+   line-height: 30px;
+}

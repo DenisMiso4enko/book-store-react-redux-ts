@@ -1,10 +1,13 @@
 import React from "react";
 import { TABS } from "../../constanse";
-import "./Tabs.css";
 import { useDispatch, useSelector } from "react-redux";
 import { IStore } from "../../redux/types";
 import { setActiveTab } from "../../redux/actionCreators/settingsActionCreators";
 import { selectDesc } from "../../redux/selectors/descSelector";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import MoreHorizOutlinedIcon from "@mui/icons-material/MoreHorizOutlined";
+import "./Tabs.css";
 
 const Tabs = () => {
   const { activeTab } = useSelector((state: IStore) => state.settings);
@@ -28,7 +31,20 @@ const Tabs = () => {
         ))}
       </div>
       <div className="tab-content">
-        <p>{details}</p>
+        <div>
+          <p className="tab-details">{details}</p>
+          <div className="social-btns">
+            <a href="/" target="_blank" className="social-btns-item">
+              <FacebookIcon />
+            </a>
+            <a href="/" target="_blank" className="social-btns-item">
+              <TwitterIcon />
+            </a>
+            <a href="/" target="_blank" className="social-btns-item">
+              <MoreHorizOutlinedIcon />
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );

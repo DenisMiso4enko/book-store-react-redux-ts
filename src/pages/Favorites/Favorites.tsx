@@ -19,7 +19,7 @@ const Favorites = () => {
   }, [favorites]);
   return (
     <div>
-      <h1>Favorites Books</h1>
+      <h1>Favorites Books {favorites.length}</h1>
       <div className="favorites-books">
         {data.map((item) => (
           <BookItem key={item.isbn13} {...item} variant="lg" />
