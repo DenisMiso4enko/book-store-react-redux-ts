@@ -1,11 +1,16 @@
 .App {
-    min-height: 70vh;
+    min-height: 76vh;
 }
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    transition: background-color .3s ease;
+}
 
+.container--dark {
+    background-color: #5d5d5d;
+    color: #fff;
 }
 
 .footer {

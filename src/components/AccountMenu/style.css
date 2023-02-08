@@ -1,0 +1,15 @@
+.menu--dark {
+    background: #5d5d5d;
+}
+
+.btn {
+    border: none;
+    background: transparent;
+}
+.btn--light {
+    color: black !important;
+}
+.btn--dark {
+    color: black !important;
+}
+

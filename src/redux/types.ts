@@ -1,3 +1,5 @@
+import { lightBlue } from "@mui/material/colors";
+
 export interface IUser {
   id?: number;
   email?: string;
@@ -64,6 +66,7 @@ export interface ISettingsStore {
   activeTab: string;
   page: number;
   pageSize: number;
+  theme: "light" | "dark";
 }
 
 export interface IStore {

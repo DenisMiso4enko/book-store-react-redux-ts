@@ -1,4 +1,8 @@
-import { SET_ACTIVE_TAB, SET_PAGE } from "../actionTypes/settingsActionTypes";
+import {
+  SET_ACTIVE_TAB,
+  SET_PAGE,
+  SET_THEME,
+} from "../actionTypes/settingsActionTypes";
 
 export const setActiveTab = (activeTab: string) => ({
   type: SET_ACTIVE_TAB,
@@ -8,4 +12,8 @@ export const setActiveTab = (activeTab: string) => ({
 export const setPage = (page: number) => ({
   type: SET_PAGE,
   page,
+});
+export const setTheme = (theme: string) => ({
+  type: SET_THEME,
+  theme,
 });

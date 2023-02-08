@@ -48,7 +48,7 @@ const FormAuth = () => {
 
   return (
     <>
-      <h1 className="form-header">Войдите</h1>
+      <h1 className="form-header">Sign in</h1>
       <form className="form-auth" onSubmit={handleSubmit(handleSignIn)}>
         <TextField
           id="outlined-email"
@@ -75,11 +75,11 @@ const FormAuth = () => {
           error={Boolean(errors.password?.message)}
         />
         <Button variant="contained" type="submit" color="success">
-          Войти
+          Login
         </Button>
 
         <span className="span">
-          Если нет аккаунта
+          You do not have an account?
           <Link to="/sign_up">
             <Button color="primary" variant="text">
               Register

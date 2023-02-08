@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { IStore } from "../../redux/types";
 import { useEffect } from "react";
 import { setSearchValue } from "../../redux/actionCreators/booksActionCreators";
+import * as React from "react";
 
 const Home = () => {
   const { books, searchValue } = useSelector((state: IStore) => state.books);
@@ -14,6 +15,7 @@ const Home = () => {
   return (
     <div>
       <h1 className="title">NEW RELEASED BOOKS</h1>
+
       <BookList books={books} searchValue={searchValue} />
     </div>
   );

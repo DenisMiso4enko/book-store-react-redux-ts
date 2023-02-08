@@ -12,11 +12,16 @@ import { Link, useNavigate } from "react-router-dom";
 import { logOut } from "../../redux/actionCreators/userActionCreators";
 import { useDispatch, useSelector } from "react-redux";
 import { IStore } from "../../redux/types";
+import { setTheme } from "../../redux/actionCreators/settingsActionCreators";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
+import WbSunnyIcon from "@mui/icons-material/WbSunny";
+import "./style.css";
 
 export default function AccountMenu() {
   const { user } = useSelector((state: IStore) => state.user);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const { items } = useSelector((state: IStore) => state.cart);
+  const { theme } = useSelector((state: IStore) => state.settings);
   const cartLength = items.length;
   const open = Boolean(anchorEl);
   const dispatch = useDispatch();
@@ -33,6 +38,10 @@ export default function AccountMenu() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  const handleToggleTheme = () => {
+    dispatch(setTheme(theme === "light" ? "dark" : "light"));
+  };
+
   return (
     <React.Fragment>
       <Box sx={{ display: "flex", alignItems: "center", textAlign: "center" }}>
@@ -118,6 +127,13 @@ export default function AccountMenu() {
         </MenuItem>
         <Divider />
         <MenuItem onClick={handleLogOut}>Logout</MenuItem>
+        {/*<MenuItem>*/}
+        {/*  <div className="theme-action">*/}
+        {/*    <button className={`btn btn--${theme}`} onClick={handleToggleTheme}>*/}
+        {/*      {theme === "light" ? <DarkModeIcon /> : <WbSunnyIcon />}*/}
+        {/*    </button>*/}
+        {/*  </div>*/}
+        {/*</MenuItem>*/}
       </Menu>
     </React.Fragment>
   );

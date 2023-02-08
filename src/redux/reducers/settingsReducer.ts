@@ -1,11 +1,16 @@
 import { TABS } from "../../constanse";
-import { SET_ACTIVE_TAB, SET_PAGE } from "../actionTypes/settingsActionTypes";
+import {
+  SET_ACTIVE_TAB,
+  SET_PAGE,
+  SET_THEME,
+} from "../actionTypes/settingsActionTypes";
 import { ISettingsStore } from "../types";
 
 const initialState: ISettingsStore = {
   activeTab: TABS.Description,
   page: 1,
   pageSize: 6,
+  theme: "light",
 };
 
 export const settingsReducer = (state = initialState, action: any) => {
@@ -22,6 +27,13 @@ export const settingsReducer = (state = initialState, action: any) => {
       return {
         ...state,
         page,
+      };
+    }
+    case SET_THEME: {
+      const { theme } = action;
+      return {
+        ...state,
+        theme,
       };
     }
     default:

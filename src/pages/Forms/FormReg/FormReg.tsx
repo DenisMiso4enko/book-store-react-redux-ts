@@ -34,7 +34,7 @@ const FormReg = () => {
   };
   return (
     <>
-      <h1 className="form-header">Регистрация</h1>
+      <h1 className="form-header">Sign up</h1>
       <form className="form-reg" onSubmit={handleSubmit(handleSignIn)}>
         <TextField
           id="outlined-username"
@@ -76,10 +76,10 @@ const FormReg = () => {
           error={Boolean(errors.password?.message)}
         />
         <Button variant="contained" type="submit">
-          Зарегестрироваться
+          Registration
         </Button>
         <span>
-          Если есть аккаунт{" "}
+          You have an account?
           <Link to="/sign_in">
             {" "}
             <Button color="primary" variant="text">

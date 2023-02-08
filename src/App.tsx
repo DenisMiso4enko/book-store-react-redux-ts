@@ -6,7 +6,7 @@ import FormAuth from "./pages/Forms/FormAuth/FormAuth";
 import Header from "./components/Header/Header";
 import ActivatePage from "./pages/Activate/ActivatePage";
 import Success from "./pages/Success/Success";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getUser } from "./redux/actionCreators/userActionCreators";
 import Profile from "./pages/Profile/Profile";
 import "./App.css";
@@ -14,17 +14,17 @@ import Footer from "./components/Footer/Footer";
 import BookPage from "./pages/BookPage/BookPage";
 import Favorites from "./pages/Favorites/Favorites";
 import Cart from "./pages/Cart/Cart";
+import { IStore } from "./redux/types";
 
 function App() {
+  const { theme } = useSelector((state: IStore) => state.settings);
   const dispatch = useDispatch();
-
   useEffect(() => {
     dispatch(getUser());
   }, []);
-
   return (
     <>
-      <div className="container">
+      <div className={`container container--${theme}`}>
         <Header />
         <div className="App">
           <Routes>
