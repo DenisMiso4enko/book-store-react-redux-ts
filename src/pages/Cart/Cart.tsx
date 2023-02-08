@@ -1,12 +1,18 @@
 import React from "react";
-import { IStore } from "../../redux/types";
+import { IStore, IUser } from "../../redux/types";
 import { useDispatch, useSelector } from "react-redux";
 import CartItem from "../../components/CartItem/CartItem";
 import { clearCart } from "../../redux/actionCreators/cartActionCreators";
 import "./Cart.css";
 import { Button } from "@mui/material";
 import { getTotal } from "../../utils/getTotal";
+import { Navigate } from "react-router-dom";
 const Cart = () => {
+  const { user } = useSelector((state: IUser) => state.user);
+
+  if (!user) {
+    return <Navigate to="/sign_in" />;
+  }
   const { items } = useSelector((state: IStore) => state.cart);
 
   const dispatch = useDispatch();

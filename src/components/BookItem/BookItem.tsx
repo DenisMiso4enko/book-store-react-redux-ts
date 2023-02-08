@@ -22,10 +22,10 @@ const BookItem = ({
       <div className="book-image">
         <img src={image} />
       </div>
-      <h2>
+      <h2 className="book-title">
         <Link to={`/book/${isbn13}`}>{title}</Link>
       </h2>
-      <p>{subtitle}</p>
+      <p className="book-subtitle">{subtitle}</p>
       <div className="book-details">
         <span>{price}</span>
         <div className="book-rate">

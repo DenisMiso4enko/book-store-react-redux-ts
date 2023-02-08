@@ -1,16 +1,19 @@
-import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { IUser } from "../../redux/types";
-import { useNavigate } from "react-router-dom";
-import { logOut } from "../../redux/actionCreators/userActionCreators";
+import React, { FC } from "react";
+import { IUserProps } from "../../redux/types";
+import "./User.css";
+import avatar from "../../assets/avatar.png";
 
-const User = () => {
-  const { user } = useSelector((state: IUser) => state.user);
+const User: FC<IUserProps> = ({ user }) => {
   return (
     <div>
       <div className="user-info">
-        <div className="user-avatar">00000</div>
-        <div className="user-name">{user && <h2>{user.username}</h2>}</div>
+        <div className="user-avatar">
+          <img src={avatar} alt="avatar" />
+        </div>
+        <div className="user-name">
+          <h2>{user?.username}</h2>
+          <p>{user?.email}</p>
+        </div>
       </div>
     </div>
   );

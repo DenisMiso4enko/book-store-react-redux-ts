@@ -10,6 +10,10 @@ export interface IUser {
   user?: any | null;
 }
 
+export interface IUserProps {
+  user: IUser;
+}
+
 export interface IUserStore {
   user: IUser;
 }

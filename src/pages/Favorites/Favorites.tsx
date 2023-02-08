@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { IBooks, IStore } from "../../redux/types";
+import { IBooks, IStore, IUser } from "../../redux/types";
 import BookItem from "../../components/BookItem/BookItem";
 import "./Favorites.css";
+import { Navigate } from "react-router-dom";
 
 const Favorites = () => {
   const [data, setData] = useState([] as IBooks[]);
-  const { books } = useSelector((state: IStore) => state.books);
-  const { favorites } = useSelector((state: IStore) => state.books);
+  const { user } = useSelector((state: IUser) => state.user);
+  const { books, favorites } = useSelector((state: IStore) => state.books);
   useEffect(() => {
     const resultData = [] as IBooks[];
     books.forEach((book) => {
@@ -17,6 +18,10 @@ const Favorites = () => {
     });
     setData(resultData);
   }, [favorites]);
+
+  if (!user) {
+    return <Navigate to="/sign_in" />;
+  }
   return (
     <div>
       <h1>Favorites Books {favorites.length}</h1>

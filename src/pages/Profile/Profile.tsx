@@ -1,10 +1,18 @@
 import React from "react";
 import User from "../../components/User/User";
+import { useSelector } from "react-redux";
+import { IUser } from "../../redux/types";
+import { Navigate } from "react-router-dom";
 
 const Profile = () => {
+  const { user } = useSelector((state: IUser) => state.user);
+
+  if (!user) {
+    return <Navigate to="/" />;
+  }
   return (
     <div>
-      <User />
+      <User user={user} />
     </div>
   );
 };
