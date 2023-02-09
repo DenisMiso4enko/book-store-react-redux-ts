@@ -1,7 +1,7 @@
 import React from "react";
 import { TABS } from "../../constanse";
 import { useDispatch, useSelector } from "react-redux";
-import { IStore } from "../../redux/types";
+import { IStore } from "../../types/types";
 import { setActiveTab } from "../../redux/actionCreators/settingsActionCreators";
 import { selectDesc } from "../../redux/selectors/descSelector";
 import FacebookIcon from "@mui/icons-material/Facebook";

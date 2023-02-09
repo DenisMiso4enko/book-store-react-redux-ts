@@ -11,6 +11,7 @@ import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import { Button } from "@mui/material";
 import "./CartItem.css";
+import { Link } from "react-router-dom";
 
 interface ICartItemProps {
   price: number;
@@ -35,10 +36,12 @@ const CartItem = ({ price, title, image, isbn13, count }: ICartItemProps) => {
   return (
     <div className="cart-item">
       <div className="cart-image">
-        <img src={image} />
+        <img src={image} alt="product" />
       </div>
       <div className="cart-info">
-        <h1>{title}</h1>
+        <h1>
+          <Link to={`/book/${isbn13}`}>{title}</Link>
+        </h1>
         <div className="cart-actions">
           <Button onClick={handleIncrement} variant="text">
             <RemoveIcon />

@@ -11,7 +11,7 @@ import { IoHeartOutline, IoBagHandleOutline } from "react-icons/io5";
 import { Link, useNavigate } from "react-router-dom";
 import { logOut } from "../../redux/actionCreators/userActionCreators";
 import { useDispatch, useSelector } from "react-redux";
-import { IStore } from "../../redux/types";
+import { IStore } from "../../types/types";
 import { setTheme } from "../../redux/actionCreators/settingsActionCreators";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";

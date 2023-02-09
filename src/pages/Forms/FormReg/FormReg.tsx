@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { signUp } from "../../../redux/actionCreators/userActionCreators";
 import { Link, Navigate } from "react-router-dom";
 import "./FormReg.css";
-import { IStore } from "../../../redux/types";
+import { IStore } from "../../../types/types";
 
 const FormReg = () => {
   const { user } = useSelector((state: IStore) => state.user);

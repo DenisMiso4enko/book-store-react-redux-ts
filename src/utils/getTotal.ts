@@ -1,4 +1,4 @@
-import { IBooks } from "../redux/types";
+import { IBooks } from "../types/types";
 
 export const getTotal = (arg: IBooks[]): string => {
   let totalQuantity = 0;

@@ -4,7 +4,7 @@ import {
   SET_PAGE,
   SET_THEME,
 } from "../actionTypes/settingsActionTypes";
-import { ISettingsStore } from "../types";
+import { ISettingsStore } from "../../types/types";
 
 const initialState: ISettingsStore = {
   activeTab: TABS.Description,

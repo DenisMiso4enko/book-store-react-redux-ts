@@ -1,5 +1,5 @@
 import React from "react";
-import { IBooks } from "../../redux/types";
+import { IBooks } from "../../types/types";
 import { Link } from "react-router-dom";
 import { Rating } from "@mui/material";
 import "./BookItem.css";

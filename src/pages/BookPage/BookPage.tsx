@@ -4,7 +4,7 @@ import { Link, Navigate, useLocation } from "react-router-dom";
 import OneBook from "../../components/OneBook/OneBook";
 import Slider from "../../components/Slider/Slider";
 import { useSelector } from "react-redux";
-import { IStore } from "../../redux/types";
+import { IStore } from "../../types/types";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import Subscribe from "../../components/Subscribe/Subscribe";
 

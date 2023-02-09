@@ -1,5 +1,5 @@
 import { LOG_OUT, SET_USER, SIGN_UP } from "../actionTypes/userActionTypes";
-import { IUser } from "../types";
+import { IUser } from "../../types/types";
 
 const initialState: IUser = {
   user: null,

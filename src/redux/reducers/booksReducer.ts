@@ -1,4 +1,4 @@
-import { IBookStore } from "../types";
+import { IBookStore } from "../../types/types";
 import {
   ADD_FAVORITE,
   REMOVE_FAVORITE,

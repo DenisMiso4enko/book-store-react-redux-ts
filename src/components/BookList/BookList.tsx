@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { IBookListProps, IStore } from "../../redux/types";
+import { IBookListProps, IStore } from "../../types/types";
 import BookItem from "../BookItem/BookItem";
 import "./BookList.css";
 import {
@@ -12,8 +12,6 @@ import Pagination from "../Pagination/PaginationEl";
 import { paginate } from "../../utils/paginate";
 import { setPage } from "../../redux/actionCreators/settingsActionCreators";
 import Subscribe from "../Subscribe/Subscribe";
-
-
 
 const BookList = ({ books, searchValue }: IBookListProps) => {
   window.scrollTo(0, 0);

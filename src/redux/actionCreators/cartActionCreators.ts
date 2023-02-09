@@ -5,7 +5,7 @@ import {
   DELETE_ITEM,
   INCREMENT,
 } from "../actionTypes/cartActionTypes";
-import { ICartItem } from "../types";
+import { ICartItem } from "../../types/types";
 
 export const addToCart = (item: ICartItem) => ({
   type: ADD_TO_CART,

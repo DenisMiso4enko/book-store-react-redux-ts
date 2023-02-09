@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { IStore, IUser } from "../../redux/types";
+import { IStore, IUser } from "../../types/types";
 import { Link, useLocation, useParams } from "react-router-dom";
 import AccountMenu from "../AccountMenu/AccountMenu";
 import { setSearchValue } from "../../redux/actionCreators/booksActionCreators";

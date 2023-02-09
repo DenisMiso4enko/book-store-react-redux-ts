@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { IBooks, IStore, IUser } from "../../redux/types";
+import { IBooks, IStore, IUser } from "../../types/types";
 import BookItem from "../../components/BookItem/BookItem";
 import "./Favorites.css";
 import { Navigate } from "react-router-dom";

@@ -1,4 +1,4 @@
-import { ICartStore } from "../types";
+import { ICartStore } from "../../types/types";
 import {
   ADD_TO_CART,
   CLEAR_CART,

@@ -7,7 +7,7 @@ import {
   SIGN_IN,
   SIGN_UP,
 } from "../actionTypes/userActionTypes";
-import { IToken, IUser } from "../types";
+import { IToken, IUser } from "../../types/types";
 
 export function* watcherUserCreate() {
   yield takeEvery(SIGN_UP, fetchSignUp);
@@ -108,7 +108,6 @@ function* fetchGetUser() {
       }
     );
     const user: IUser = yield data.json();
-    // console.log(user);
     yield put(setUser(user));
   }
 }
@@ -144,7 +143,6 @@ function* getToken() {
   }
   return "";
 }
-
 
 // fipol50178@cmeinbox.com
 // hidet70652@khaxan.com

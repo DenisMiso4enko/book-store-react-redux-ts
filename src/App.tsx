@@ -14,7 +14,8 @@ import Footer from "./components/Footer/Footer";
 import BookPage from "./pages/BookPage/BookPage";
 import Favorites from "./pages/Favorites/Favorites";
 import Cart from "./pages/Cart/Cart";
-import { IStore } from "./redux/types";
+import { IStore } from "./types/types";
+import NotFound from "./pages/NotFound/NotFound";
 
 function App() {
   const { theme } = useSelector((state: IStore) => state.settings);
@@ -43,6 +44,7 @@ function App() {
               <Route path="book">
                 <Route path=":id" element={<BookPage />} />
               </Route>
+              <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>
         </div>

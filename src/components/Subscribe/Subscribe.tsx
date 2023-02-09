@@ -6,6 +6,7 @@ const Subscribe = () => {
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
     if (email.trim().length > 0) {
+      setEmail("");
       alert("You are subscribed");
     }
   };

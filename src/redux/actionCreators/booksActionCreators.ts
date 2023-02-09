@@ -9,7 +9,7 @@ import {
   SET_SEARCH_VALUE,
 } from "../actionTypes/booksActionTypes";
 import { takeEvery, put } from "redux-saga/effects";
-import { IBooks, IBookStore } from "../types";
+import { IBooks, IBookStore } from "../../types/types";
 
 export function* watcherBooks() {
   yield takeEvery(LOAD_BOOKS, fetchGetBooks);

@@ -1,6 +1,6 @@
 import BookList from "../../components/BookList/BookList";
 import { useDispatch, useSelector } from "react-redux";
-import { IStore } from "../../redux/types";
+import { IStore } from "../../types/types";
 import { useEffect } from "react";
 import { setSearchValue } from "../../redux/actionCreators/booksActionCreators";
 import * as React from "react";

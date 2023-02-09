@@ -4,7 +4,7 @@ import { signIn } from "../../../redux/actionCreators/userActionCreators";
 import { Button, TextField } from "@mui/material";
 import { useForm } from "react-hook-form";
 import "./FormAuth.css";
-import { IStore } from "../../../redux/types";
+import { IStore } from "../../../types/types";
 import React from "react";
 import { toast } from "react-toastify";
 

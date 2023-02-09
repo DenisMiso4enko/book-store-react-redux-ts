@@ -1,4 +1,4 @@
-import { IStore } from "../types";
+import { IStore } from "../../types/types";
 
 export const selectDesc = (state: IStore, tab: any) => {
   if (!tab) return state.books.oneBook;

@@ -12,7 +12,7 @@ import Tabs from "../Tabs/Tabs";
 import OneBookLoader from "./OneBookLoader";
 import { addToCart } from "../../redux/actionCreators/cartActionCreators";
 import { IoHeartOutline } from "react-icons/io5";
-import { IOneBook, IStore } from "../../redux/types";
+import { IOneBook, IStore } from "../../types/types";
 import { Button, Rating } from "@mui/material";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";

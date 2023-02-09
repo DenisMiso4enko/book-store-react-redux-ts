@@ -2,7 +2,7 @@ import React from "react";
 
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 
-import { IBooks, IStore } from "../../redux/types";
+import { IBooks, IStore } from "../../types/types";
 import BookItem from "../BookItem/BookItem";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";

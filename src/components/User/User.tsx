@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { IUserProps } from "../../redux/types";
+import { IUserProps } from "../../types/types";
 import "./User.css";
 import avatar from "../../assets/avatar.png";
 

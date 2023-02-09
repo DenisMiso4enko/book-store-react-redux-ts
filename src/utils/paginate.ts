@@ -1,4 +1,4 @@
-import { IBooks } from "../redux/types";
+import { IBooks } from "../types/types";
 
 export const paginate = (
   items: IBooks[],
